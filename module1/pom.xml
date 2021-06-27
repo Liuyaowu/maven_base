@@ -96,7 +96,31 @@
 
         <!--                 scope说明                -->
 
+        <dependency>
+            <groupId>com.mobei.maven</groupId>
+            <artifactId>import_pom</artifactId>
+        </dependency>
+
+        <!--这里为什么不报错-->
+        <dependency>
+            <groupId>org.activiti</groupId>
+            <artifactId>activiti-engine</artifactId>
+            <version>5.14</version>
+        </dependency>
     </dependencies>
+
+    <!-- 通过import+pom的方式限定只能引用impot_pom_bom中指定的activity版本 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.mobei.maven</groupId>
+                <artifactId>impot_pom_bom</artifactId>
+                <version>1.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <!-- 将指定目录下的资源文件打包到jar包 -->

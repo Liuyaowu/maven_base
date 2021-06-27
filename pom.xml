@@ -10,14 +10,16 @@
 
     <modules>
         <module>module1</module>
-        <module>import_pom</module>
+        <!--<module>import_pom</module>
+        <module>impot_pom_bom</module>
+        <module>test_impot_pom_limit</module>-->
     </modules>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <!--统一管理版本号:引用${xxx.version}-->
-        <xxx.version>x.x.x</xxx.version>
+        <!--<xxx.version>x.x.x</xxx.version>-->
     </properties>
 
     <!--管理所有的依赖: 父工程这种方式管理的依赖和插件全部会被子工程依赖-->
